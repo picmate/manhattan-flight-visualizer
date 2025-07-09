@@ -3,6 +3,8 @@
  *  Flight over Manhattan                                                *
  **************************************************************************/
 
+import { startOpenSkyFlights } from './third-party-integrations/opensky.js';
+
 // ------------------------------------------------------------------
 // Auth
 // ------------------------------------------------------------------
@@ -30,3 +32,12 @@ try {
 } catch (err) {
   console.warn(`Custom asset ${MANHATTAN_MODEL_ID} not ready or bad id`);
 }
+
+
+// ------------------------------------------------------------
+// OpenSky Network Live Aircraft Visualization for Manhattan
+// ------------------------------------------------------------
+
+// Start OpenSky flights with a refresh every 2 seconds (2000 ms)
+const stopOpenSky = startOpenSkyFlights(viewer, 2000);
+
