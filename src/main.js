@@ -4,6 +4,7 @@
  **************************************************************************/
 
 import { startOpenSkyFlights } from './third-party-integrations/opensky.js';
+import { animateFlight } from './flightAnimation.js';
 
 // ------------------------------------------------------------------
 // Auth
@@ -38,6 +39,11 @@ try {
 // OpenSky Network Live Aircraft Visualization for Manhattan
 // ------------------------------------------------------------
 
-// Start OpenSky flights with a refresh every 2 seconds (2000 ms)
-const stopOpenSky = startOpenSkyFlights(viewer, 2000);
+// Start OpenSky flights with a refresh every 20 seconds (20000 ms)
+const stopOpenSky = startOpenSkyFlights(viewer, 20000);
 
+
+// ------------------------------------------------------------
+// Animate a flight path over Manhattan
+// ------------------------------------------------------------
+animateFlight(viewer);
