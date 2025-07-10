@@ -44,7 +44,7 @@ export async function animateFlight(viewer) {
   });
 
   // Load and animate aircraft model
-  const AIRCRAFT_MODEL_ID = 3523558;
+  const AIRCRAFT_MODEL_ID = 3527397;
   const airplaneUri = await Cesium.IonResource.fromAssetId(AIRCRAFT_MODEL_ID);
   const airplaneEntity = viewer.entities.add({
     availability: new Cesium.TimeIntervalCollection([
