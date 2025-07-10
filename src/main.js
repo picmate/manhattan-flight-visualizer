@@ -1,19 +1,17 @@
 /**************************************************************************
- *  Cesium Demo                                                          * 
- *  Flight over Manhattan                                                *
+ *  Cesium Demo                                                           * 
+ *  Flights over Manhattan                                                *
  **************************************************************************/
 
 import { startOpenSkyFlights } from './third-party-integrations/opensky.js';
 import { animateFlight } from './flightAnimation.js';
 
-// ------------------------------------------------------------------
-// Auth
-// ------------------------------------------------------------------
+
+// Auth - Adding the token here for demo purposes as it is a throw-away public token with read-only scope
 Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmODg1NDQ4NS02Mzg4LTQ2ZjgtOGUxNy05Yjg5OWI1OGRjNjciLCJpZCI6ODIwNzIsImlhdCI6MTc1MTIzNTUxMX0.nb_x6vP8r1vOuCt0zo4yDw_p9SVxJk9zhUw9PwEJViM";   // <-- paste token
 
-// ------------------------------------------------------------------
+
 // Viewer with World Terrain
-// ------------------------------------------------------------------
 const viewer = new Cesium.Viewer("cesiumContainer", {
   terrain: Cesium.Terrain.fromWorldTerrain(),
   animation: true,
@@ -21,10 +19,8 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 });
 
 
-// ------------------------------------------------------------
 // Add Manhattan dataset from Cesium Ion
 // This is a custom asset ID for a 3D tileset of Manhattan.
-// ------------------------------------------------------------
 const MANHATTAN_MODEL_ID = 3523558;
 try {
   const manhattanTileset = await Cesium.Cesium3DTileset.fromIonAssetId(MANHATTAN_MODEL_ID);
@@ -35,15 +31,10 @@ try {
 }
 
 
-// ------------------------------------------------------------
 // OpenSky Network Live Aircraft Visualization for Manhattan
-// ------------------------------------------------------------
-
 // Start OpenSky flights with a refresh every minute (60000 ms)
 const stopOpenSky = startOpenSkyFlights(viewer, 60000);
 
 
-// ------------------------------------------------------------
 // Animate a flight path over Manhattan
-// ------------------------------------------------------------
 animateFlight(viewer);
