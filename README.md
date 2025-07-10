@@ -1,20 +1,16 @@
 # Manhattan Flight Visualizer
 
-A web application for visualizing flight paths over Manhattan using CesiumJS.
+A lightweight CesiumJS web app that visualizes a custom flight over Manhattan and overlays live OpenSky traffic.
+Live demo: https://picmate.github.io/manhattan-flight-visualizer/ (OpenSky aircrafts may be absent in the hosted build because the demo uses anonymous API access).
 
 ## Features
 
-- Cesium Terrain
-- 3D Building Models over Manhattan 
-- OpenSky Network Realtime Flights over Manhattan
-- Display Animated Flight Path
+- Streamed World Terrain
+- Manhattan 3D Buildings
+- Live OpenSky Traffic Layer
+- Animated Demo Flight
 
 ## Getting Started
-
-### Prerequisites
-
-- Node.js (v14+ recommended)
-- npm or yarn
 
 ### Installation
 
@@ -37,7 +33,7 @@ python3 -m http.server 8080
 
 - Add flight data as a JS array of longitude, latitude, height in meters, time in seconds to visualize
 - Hit the Cesium play/pause button for the aircraft animation
-- Visualize currently active flights in and around Manhattan, NY (updated every one minute)
+- Visualize currently active flights in and around Manhattan, NY (updated every minute)
 
 
 ## Limitations
