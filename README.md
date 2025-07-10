@@ -19,7 +19,7 @@ A web application for visualizing flight paths over Manhattan using CesiumJS.
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/manhattan-flight-visualizer.git
+git clone https://github.com/picmate/manhattan-flight-visualizer.git
 cd manhattan-flight-visualizer
 ```
 
