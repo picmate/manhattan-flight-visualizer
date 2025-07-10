@@ -34,6 +34,7 @@ python3 -m http.server 8080
 - Add flight data as a JS array of longitude, latitude, height in meters, time in seconds to visualize
 - Hit the Cesium play/pause button for the aircraft animation
 - Visualize currently active flights in and around Manhattan, NY (updated every minute)
+- Zoom out for OpenSky’s live flight traffic to show up
 
 
 ## Limitations
