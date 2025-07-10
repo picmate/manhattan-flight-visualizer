@@ -39,7 +39,8 @@ python3 -m http.server 8080
 
 ## Limitations
 
-- OpenSky’s anonymous quota is sufficient for an occasional refresh every 60 s during a short demo; no back-end proxy or token refresh is included in the hosted version
+- OpenSky’s anonymous quota is sufficient for an occasional refresh every 60 s during a short demo; no back-end proxy or token refresh is included in the hosted version.
+- The app could be improved by adding a backend service to configure the bounding box for OpenSky requests, proxy those requests through the backend, and manage asset IDs through a centralized backend configuration.
 
 ## Assumptions
 

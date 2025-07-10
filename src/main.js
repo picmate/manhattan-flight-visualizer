@@ -33,7 +33,7 @@ try {
 
 // OpenSky Network Live Aircraft Visualization for Manhattan
 // Start OpenSky flights with a refresh every minute (60000 ms)
-const stopOpenSky = startOpenSkyFlights(viewer, 60000);
+// const stopOpenSky = startOpenSkyFlights(viewer, 60000);
 
 
 // Animate a flight path over Manhattan
